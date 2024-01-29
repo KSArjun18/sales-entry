@@ -1,0 +1,38 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.date-time {
+  font-size: 18px;
+ margin-left: 65rem;
+}
+
+.animated-word {
+  display: flex;
+  animation: animate-word 2s ease-in-out infinite;
+  color: #fff;
+  font-size: 18px;
+}
+
+@keyframes animate-word {
+  0% {
+    transform: translateX(10);
+  }
+  50% {
+    transform: translateX(60px);
+  }
+  100% {
+    transform: translateX(10);
+  }
+}

@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Header_table from "./Header/Header_table";
+import Detail_Table from "./Table/Detail_Table";
+import TopBar from "./Topbar/TopBar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <TopBar />
+      <Routes>
+        <Route path="" element={<Detail_Table />}></Route>
+        <Route path="header" element={<Header_table />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
